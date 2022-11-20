@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/example.css') }}">
+<style>
+</style>
+</head>
+
+{% block content %}
+<body>
+    <div>
+        <p>
+            <select class="ingredient-select" name="ingredients" multiple="multiple" style="margin-top: 20px; margin-left: 20px;">
+                <option value="sparerib">Spare Ribs</option>
+                <option value="frozen_limeade_concentrate ">Frozen Limeade Concentrate</option>
+                <option value="dry_rub_seasoning ">Dry Rub Seasoning</option>
+                <option value="baby_back_rib">Baby Back Ribs</option>
+                <option value="wood_chip">Wood Chip</option>
+                <option value="beef_brisket">Beef Brisket</option>
+                <option value="pot_roast">Pot Roast</option>
+                <option value="lipton_onion_soup_mix">Lipton Onion Soup Mix</option>
+                <option value="borax">Borax</option>
+                <option value="batter_frying_mix">Batter Frying Mix</option>
+            </select>
+        </p>
+        <span>
+
+        </span>
+    </div>
+    
+</body>
+{% endblock %}
+
+</html>
+
+<script>
+    $(document).ready(function() {
+        $('.ingredient-select').select2();
+    });
+</script>
